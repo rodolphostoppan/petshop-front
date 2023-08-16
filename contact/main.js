@@ -2,6 +2,7 @@ const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
 const submitInput = document.getElementById("submit");
+const form = document.getElementById("form");
 
 phoneInput.addEventListener("focus", function () {
   if (phoneInput.value === "") {
@@ -27,6 +28,10 @@ phoneInput.addEventListener("input", function () {
   if (value.length > 7) {
     value = `${value.slice(0, 10)}-${value.slice(10)}`;
   }
-
   phoneInput.value = value;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Dados enviados com sucesso!");
 });
