@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>FindAFriend</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Logo" />
+
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./gallery">Gallery</a></li>
+          <li><a href="./contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="top">
+      <h1>
+        O cuidado que <br />
+        seu pet merece!
+      </h1>
+      <p>
+        Nossa missão é cuidar de quem você mais ama para <br />
+        que ele tenha uma vida mais longa e feliz ao seu lado.
+      </p>
+
+      <img
+        src="./assets/dog.png"
+        alt="Cachorro caramelo com a lingua pra fora"
+      />
+
+      <a href="./contact">Acesse agora</a>
+    </section>
+
+    <section class="mid">
+      <div class="background-container">
+        <img src="./assets/img-section-middle.svg" />
+      </div>
+
+      <div class="cards-container">
+        <h2>
+          Mais que um petshop,<br />
+          uma caixinha de amigos...
+        </h2>
+        <div class="card card1">
+          <h3>🐕</h3>
+          <p>
+            Não tem com quem deixar seu pet? Deixe conosco, temos o que há de
+            melhor em diversão para seu pet!
+          </p>
+        </div>
+        <div class="card card2">
+          <h3>🐈</h3>
+          <p>
+            Oferecemos serviços de banho e tosa para o animal esteja em plenos
+            cuidados.
+          </p>
+        </div>
+        <div class="card card3">
+          <h3>🦮</h3>
+          <p>
+            Aqui é garantia que você irá encontrar um item que seu bichinho vai
+            adorar! Seja uma caminha confortável, coleiras e roupas estilosas,
+            brinquedos divertidos ou outro item de nosso acervo variado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pets">
+      <h2>
+        Há muitos<br />
+        amigos esperando por você!
+      </h2>
+      <a href="./contact">Acesse agora</a>
+
+      <p>
+        O FiendAFriend conecta pessoas que estão procurando por um animal de
+        estimação com animais que precisam de um lar amoroso. É fácil de usar e
+        você pode navegar por uma variedade de animais para encontrar aquele que
+        melhor se adapta ao seu estilo de vida e necessidades.
+      </p>
+
+      <swiper-container class="swiper" navigation="true">
+        <swiper-slide>
+          <div class="card-pet">
+            <img src="./assets/cat-hamilton.png" />
+            <h3>Hamilton</h3>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="card-pet">
+            <img src="./assets/dog-cleiton.png" />
+            <h3>Cleiton</h3>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="card-pet">
+            <img src="./assets/cat-aldo.png" />
+            <h3>Aldo</h3>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </section>
+
+    <section class="about">
+      <h2>Sobre a <br />FindAFriend</h2>
+      <p>
+        A FindAFriend acredita que todo bichinho merece uma vida confortável e
+        segura. Valorizamos a responsabilidade no bem-estar, na estética e na
+        saúde. Além de promover o Programa de Incentivo à Adoção de Animais de
+        Rua, prega a importância da posse responsável de um pet aos seus
+        tutores.
+      </p>
+
+      <div class="card-people card1">
+        <img src="./assets/founder-Hamilton.png" alt="Foto do Hamilton" />
+        <h3>Hamilton Freire</h3>
+        <p>Fundador</p>
+      </div>
+      <div class="card-people card2">
+        <img src="./assets/founder-Lara.png" alt="Foto da Lara" />
+        <h3>Lara Valencia</h3>
+        <p>Fundadora</p>
+      </div>
+      <div class="card-people card3">
+        <img src="./assets/designer-Alana.png" alt="Foto da Alana" />
+        <h3>Aline Alana</h3>
+        <p>UI/UX Designer</p>
+      </div>
+      <div class="card-people card4">
+        <img src="./assets/dev-Tadeu.png" alt="Foto do Tadeu" />
+        <h3>Tadeu Bastos</h3>
+        <p>Full stack developer</p>
+      </div>
+
+      <div class="contact">
+        <h2>Entre em contato conosco</h2>
+        <a href="./contact">
+          <img src="./assets/email.svg" />
+          Clique aqui e envie um email.
+        </a>
+        <img src="./assets/dogs-image.svg" alt="Ilustração de cachorros" />
+      </div>
+    </section>
+
+    <footer>
+      <img src="./assets/logo.svg" alt="Logo" />
+      <p>2023 ® FindAFriend &nbsp; &nbsp; &nbsp; All rights reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  </body>
+</html>

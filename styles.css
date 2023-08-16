@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f15156;
+  --text-color: #ffffff;
+  --dark-text-color: #0d3b66;
+  --highlight-text-color: #f4d35e;
+  --card-background: #fdeced;
+  --card-border: rgba(241, 81, 86, 0.3);
+
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li,
+ul {
+  list-style: none;
+  transition: filter 0.3s;
+}
+
+li:hover,
+button:hover {
+  filter: brightness(0.8);
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--primary-color);
+
+  padding: 4rem 11.2rem;
+}
+
+header nav {
+  margin: 0 auto;
+}
+
+header nav ul {
+  display: flex;
+  gap: 6.2rem;
+}
+
+header a {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.36px;
+
+  color: var(--text-color);
+}
+
+section.top {
+  width: 100vw;
+
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-areas:
+    "h1 img"
+    "p button";
+
+  color: var(--text-color);
+  background-color: var(--primary-color);
+
+  padding: 4rem 11.2rem;
+}
+
+section.top h1 {
+  font-size: 7.2rem;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -1.44px;
+
+  grid-area: h1;
+}
+
+section.top p {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.4rem;
+
+  grid-area: p;
+}
+
+section.top img {
+  width: 40.6rem;
+  height: 48.4rem;
+
+  grid-area: img;
+}
+
+section.top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 49.2rem;
+  height: 7.2rem;
+
+  border: none;
+  border-radius: 2rem;
+
+  background-color: #ffffff;
+
+  color: var(--dark-text-color);
+
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 3.4rem;
+
+  transition: filter 0.3s;
+
+  cursor: pointer;
+}
+
+section.mid {
+  display: flex;
+  align-items: center;
+
+  gap: 5rem;
+
+  padding: 2.5rem;
+}
+
+div.background-container {
+  border-radius: 2rem;
+  background: linear-gradient(180deg, #fdeced 0%, rgba(253, 236, 237, 0) 100%);
+}
+
+div.cards-container {
+  display: grid;
+  grid-template-areas: "title title" "card1 card2" "card3 card3";
+
+  gap: 3rem;
+}
+
+div.cards-container h2 {
+  color: var(--dark-text-color);
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.96px;
+
+  grid-area: title;
+}
+
+div.card {
+  display: grid;
+  row-gap: 1.5rem;
+
+  width: fit-content;
+  height: auto;
+
+  padding: 3rem;
+
+  border-radius: 2rem;
+  border: 1px solid var(--card-border);
+
+  background-color: var(--card-background);
+}
+
+div.card p {
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.28px;
+}
+
+.card1 {
+  grid-area: card1;
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card4 {
+  grid-area: card4;
+}
+
+section.pets {
+  display: grid;
+  grid-template-areas:
+    "title p p"
+    "button cards cards";
+
+  align-items: center;
+
+  row-gap: 5rem;
+  column-gap: 10rem;
+
+  width: 121.6rem;
+  height: 100%;
+
+  margin: 5rem auto;
+  padding: 10rem;
+
+  border-radius: 2rem;
+  background-color: var(--primary-color);
+}
+
+section.pets h2 {
+  grid-area: title;
+
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.96px;
+  color: var(--highlight-text-color);
+}
+
+section.pets a {
+  grid-area: button;
+
+  width: fit-content;
+  height: fit-content;
+
+  padding: 2rem 5rem;
+
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 170%;
+
+  border-radius: 2rem;
+
+  color: var(--dark-text-color);
+  background-color: var(--text-color);
+}
+
+section.pets p {
+  grid-area: p;
+
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.4px;
+  color: var(--text-color);
+}
+
+section.pets swiper-container {
+  grid-area: cards;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+section.pets swiper-slide {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+section.pets swiper-slide div.card-pet {
+  width: fit-content;
+
+  margin: 0 2rem;
+  border-radius: 2.7rem;
+  background: var(--text-color);
+}
+section.pets swiper-slide div.card-pet h3 {
+  color: var(--dark-text-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 120%;
+
+  padding: 2rem 0;
+}
+
+section.about {
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    "h2 p p p"
+    "card1 card2 card3 card4"
+    "contact contact contact contact";
+
+  gap: 7rem 3.6rem;
+
+  padding: 7rem 11rem;
+}
+
+section.about h2 {
+  grid-area: h2;
+
+  color: var(--dark-text-color);
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 90%;
+  letter-spacing: -0.96px;
+}
+
+section.about p {
+  grid-area: p;
+
+  color: var(--dark-text-color);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.4px;
+}
+
+section.about div.card-people {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 27.8rem;
+  height: 28.4rem;
+
+  padding: 1rem;
+
+  border-radius: 2rem;
+  border: 1px solid var(--card-border);
+
+  background-color: var(--card-background);
+  color: var(--dark-text-color);
+
+  font-size: 1.8rem;
+  line-height: 120%;
+}
+
+section.about div.card-people h3 {
+  margin-top: 2.2rem;
+  font-weight: 700;
+}
+
+section.about div.contact {
+  display: grid;
+  grid-template-areas:
+    "h2 dogs"
+    "link dogs";
+  align-content: center;
+  align-items: center;
+  grid-area: contact;
+
+  width: 123.1rem;
+  height: 33.9rem;
+
+  background-color: var(--dark-text-color);
+
+  border-radius: 2rem;
+
+  padding: 7rem 0rem 7rem 10rem;
+
+  margin: 14rem 0;
+}
+
+section.about div.contact h2 {
+  grid-area: h2;
+
+  color: var(--text-color);
+
+  margin-top: 15rem;
+}
+
+section.about div.contact a {
+  grid-area: link;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.4px;
+
+  color: var(--highlight-text-color);
+
+  margin-bottom: 15rem;
+}
+section.about div.contact img {
+  grid-area: dogs;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+
+  color: var(--text-color);
+  background-color: var(--primary-color);
+
+  padding: 2.5rem 11.2rem;
+}
+
+footer p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: -0.32px;
+}
