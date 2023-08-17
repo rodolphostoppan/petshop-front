@@ -33,5 +33,18 @@ phoneInput.addEventListener("input", function () {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("Dados enviados com sucesso!");
+  sendForm();
 });
+
+function sendForm() {
+  const formData = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+  }).then(
+    alert(
+      "Dados enviados com sucesso!                                              Confira seu e-mail, enviamos uma mensagem."
+    )
+  );
+}
