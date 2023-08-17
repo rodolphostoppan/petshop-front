@@ -44,7 +44,7 @@ function sendForm() {
     body: formData,
   }).then(
     alert(
-      "Dados enviados com sucesso!                                              Confira seu e-mail, enviamos uma mensagem."
+      "Dados enviados com sucesso!\nConfira seu e-mail, enviamos uma mensagem."
     )
   );
 }
