@@ -4,17 +4,17 @@ const phoneInput = document.getElementById("phone");
 const submitInput = document.getElementById("submit");
 const form = document.getElementById("form");
 
-phoneInput.addEventListener("focus", function () {
+function setMaskOnPhoneInput() {
   if (phoneInput.value === "") {
     phoneInput.setAttribute("placeholder", "(XX) X XXXX-XXXX");
   }
-});
+}
 
-phoneInput.addEventListener("blur", function () {
+function removePlaceholderFromPhoneInput() {
   phoneInput.removeAttribute("placeholder");
-});
+}
 
-phoneInput.addEventListener("input", function () {
+function filterForPhoneInput() {
   let value = phoneInput.value.replace(/\D/g, "");
 
   if (value.length > 11) {
@@ -29,12 +29,11 @@ phoneInput.addEventListener("input", function () {
     value = `${value.slice(0, 10)}-${value.slice(10)}`;
   }
   phoneInput.value = value;
-});
+}
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  sendForm();
-});
+function alertMessage(message) {
+  alert(message);
+}
 
 function sendForm() {
   const formData = new FormData(form);
@@ -42,9 +41,33 @@ function sendForm() {
   fetch(form.action, {
     method: "POST",
     body: formData,
-  }).then(
-    alert(
-      "Dados enviados com sucesso!\nConfira seu e-mail, enviamos uma mensagem."
-    )
-  );
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        alertMessage(
+          "Dados enviados com sucesso!\nConfira seu e-mail, enviamos uma mensagem."
+        );
+      } else {
+        alertMessage("Erro ao enviar o formulário. Verifique os campos.", true);
+
+        if (data.errors.name) {
+          document.getElementById("errorName").textContent = data.errors.name;
+        }
+        if (data.errors.email) {
+          document.getElementById("errorEmail").textContent = data.errors.email;
+        }
+        if (data.errors.phone) {
+          document.getElementById("errorPhone").textContent = data.errors.phone;
+        }
+      }
+    });
 }
+
+phoneInput.addEventListener("focus", setMaskOnPhoneInput);
+phoneInput.addEventListener("blur", removePlaceholderFromPhoneInput);
+phoneInput.addEventListener("input", filterForPhoneInput);
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendForm();
+});
