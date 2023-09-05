@@ -9,9 +9,11 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
 
     <title>FindAFriend</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   </head>
   <body>
     <header>
@@ -19,7 +21,7 @@
 
       <nav>
         <ul>
-          <li><a href="./index.html">Home</a></li>
+          <li>Home</li>
           <li><a href="./gallery">Gallery</a></li>
           <li><a href="./contact">Contact</a></li>
         </ul>
@@ -46,7 +48,10 @@
 
     <section class="mid">
       <div class="background-container">
-        <img src="./assets/img-section-middle.svg" />
+        <img
+          src="./assets/img-section-middle.svg"
+          alt="Imagem de uma tela com fotos de vários animais, simulando um aplicativo "
+        />
       </div>
 
       <div class="cards-container">
@@ -96,19 +101,28 @@
       <swiper-container class="swiper" navigation="true">
         <swiper-slide>
           <div class="card-pet">
-            <img src="./assets/cat-hamilton.png" />
+            <img
+              src="./assets/cat-hamilton.png"
+              alt="Foto de um gato laranja com listras brancas deitado no chão de olhos fechados e chamado Hamilton."
+            />
             <h3>Hamilton</h3>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="card-pet">
-            <img src="./assets/dog-cleiton.png" />
+            <img
+              src="./assets/dog-cleiton.png"
+              alt="Foto de um cachorro marrom escuro com manchas caramelo olhando para cima, chamado Cleiton."
+            />
             <h3>Cleiton</h3>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="card-pet">
-            <img src="./assets/cat-aldo.png" />
+            <img
+              src="./assets/cat-aldo.png"
+              alt="Foto de um gato tigrado olhando para a esqueda, chamado Aldo."
+            />
             <h3>Aldo</h3>
           </div>
         </swiper-slide>
@@ -126,22 +140,34 @@
       </p>
 
       <div class="card-people card1">
-        <img src="./assets/founder-Hamilton.png" alt="Foto do Hamilton" />
+        <img
+          src="./assets/founder-Hamilton.png"
+          alt="Foto do fundador, um homem branco, loiro, com óculos quadrado de pontas arredondadas, com barba e olhando diretamente para a câmera. Chama-se Hamilton Freire."
+        />
         <h3>Hamilton Freire</h3>
         <p>Fundador</p>
       </div>
       <div class="card-people card2">
-        <img src="./assets/founder-Lara.png" alt="Foto da Lara" />
+        <img
+          src="./assets/founder-Lara.png"
+          alt="Foto da fundadora Lara Valencia. Uma mulher branca com cabelos escuros, olhos claros, batom vermelho e roupa escura, olhando para a câmera."
+        />
         <h3>Lara Valencia</h3>
         <p>Fundadora</p>
       </div>
       <div class="card-people card3">
-        <img src="./assets/designer-Alana.png" alt="Foto da Alana" />
+        <img
+          src="./assets/designer-Alana.png"
+          alt="Foto da UI/UX Aline Alana. Uma mulher negra com cabelos escuros e trançados, com óculos mais arredondados, sorrindo e olhando para a direita com uma blusa laranja."
+        />
         <h3>Aline Alana</h3>
         <p>UI/UX Designer</p>
       </div>
       <div class="card-people card4">
-        <img src="./assets/dev-Tadeu.png" alt="Foto do Tadeu" />
+        <img
+          src="./assets/dev-Tadeu.png"
+          alt="Foto do desenvolvedor Tadeu Bastos. Um homem branco com cabelo raspado, cavanhaque e casaco com touca, olhando para a esquerda."
+        />
         <h3>Tadeu Bastos</h3>
         <p>Full stack developer</p>
       </div>
@@ -149,10 +175,13 @@
       <div class="contact">
         <h2>Entre em contato conosco</h2>
         <a href="./contact">
-          <img src="./assets/email.svg" />
+          <img src="./assets/email.svg" alt="Ilustração de vários cachorros" />
           Clique aqui e envie um email.
         </a>
-        <img src="./assets/dogs-image.svg" alt="Ilustração de cachorros" />
+        <img
+          src="./assets/dogs-image.svg"
+          alt="Ilustração de alguns cachorros"
+        />
       </div>
     </section>
 
@@ -160,7 +189,5 @@
       <img src="./assets/logo.svg" alt="Logo" />
       <p>2023 ® FindAFriend &nbsp; &nbsp; &nbsp; All rights reserved</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   </body>
 </html>

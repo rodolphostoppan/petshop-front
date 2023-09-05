@@ -7,9 +7,11 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../contact/styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
 
     <title>FindAFriend</title>
+
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
     <header>
@@ -17,31 +19,33 @@
 
       <nav>
         <ul>
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="../gallery">Gallery</a></li>
-          <li><a href="">Contact</a></li>
+          <li>Contact</li>
         </ul>
       </nav>
     </header>
 
-    <form id="form" method="post" action="http://localhost:8080/index.php">
+    <form id="form" method="post" action="http://localhost:8080/">
       <h1>Entre em contato</h1>
       <div class="group">
         <input id="name" type="text" name="name" required="required" />
-        <label for="name">Name</label>
-        <span id="error"></span>
+        <label for="name">Nome</label>
+        <span id="errorName" class="error"></span>
         <div class="bar"></div>
       </div>
 
       <div class="group">
         <input id="email" type="text" name="email" required="required" />
         <label for="email">E-mail</label>
+        <span id="errorEmail" class="error"></span>
         <div class="bar"></div>
       </div>
 
       <div class="group">
         <input id="phone" type="tel" name="phone" required="required" />
         <label for="phone">Telefone</label>
+        <span id="errorPhone" class="error"></span>
         <div class="bar"></div>
       </div>
 
@@ -58,5 +62,4 @@
       <p>2023 ® FindAFriend &nbsp; &nbsp; &nbsp; All rights reserved</p>
     </footer>
   </body>
-  <script type="module" src="../contact/main.js"></script>
 </html>

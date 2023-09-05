@@ -58,7 +58,8 @@ header nav ul {
   gap: 6.2rem;
 }
 
-header a {
+header a,
+header li {
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 700;
@@ -66,6 +67,10 @@ header a {
   letter-spacing: -0.36px;
 
   color: var(--text-color);
+}
+
+header li {
+  cursor: default;
 }
 
 section.pets {
