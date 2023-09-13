@@ -1,5 +1,10 @@
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
 const phoneInput = document.getElementById("phone");
 const form = document.getElementById("form");
+const errorName = document.getElementById("errorName");
+const errorEmail = document.getElementById("errorEmail");
+const errorPhone = document.getElementById("errorPhone");
 
 function setMaskOnPhoneInput() {
   if (phoneInput.value === "") {
@@ -32,6 +37,12 @@ function alertMessage(message) {
   alert(message);
 }
 
+function resetInputs() {
+  nameInput.value = "";
+  emailInput.value = "";
+  phoneInput.value = "";
+}
+
 function sendForm() {
   const formData = new FormData(form);
 
@@ -49,16 +60,18 @@ function sendForm() {
         alertMessage(
           "Dados enviados com sucesso!\nConfira seu e-mail, enviamos uma mensagem."
         );
+
+        resetInputs();
       } else {
         alertMessage("Erro ao enviar o formulário.\nVerifique os campos.");
         if (name) {
-          document.getElementById("errorName").textContent = name;
+          errorName.textContent = name;
         }
         if (email) {
-          document.getElementById("errorEmail").textContent = email;
+          errorEmail.textContent = email;
         }
         if (phone) {
-          document.getElementById("errorPhone").textContent = phone;
+          errorPhone.textContent = phone;
         }
       }
     });
